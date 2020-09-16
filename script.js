@@ -63,7 +63,7 @@ function init(resultFromServer){
     let cityHeader = document.getElementById('cityHeader');
     let weatherIcon = document.getElementById('documentIconImg');
 
-    weatherIcon.src = 'https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/w/' + resultFromServer.weather[0].icon + ".png";
+    weatherIcon.src = 'http://openweathermap.org/img/w/' + resultFromServer.weather[0].icon + ".png";
     let resultDescription = resultFromServer.weather[0].description;
     weatherDescriptionHeader.innerText = resultDescription.charAt(0).toUpperCase() + resultDescription.slice(1);
     temperatureElement.innerHTML = Math.floor(resultFromServer.main.temp) + '&#176';
